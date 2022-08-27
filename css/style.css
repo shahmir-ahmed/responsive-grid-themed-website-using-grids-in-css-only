@@ -8,16 +8,8 @@ body{
 
 /* Main grid */
 
-/* Note: Main jab har section main usko grid define kar raha hun aur usko uski properties de raha hun to iske baghair koi farq nai parega website par */
 .container{
     display: grid;
-        /* grid-template-areas: 
-        'nav nav nav nav nav'
-        'hero hero hero hero hero'
-        'card card card card card'
-        'banner banner banner banner banner'
-        'gallery gallery gallery gallery gallery'
-        'footer footer footer footer footer'; */
     grid-gap: 2rem;
 }
 
@@ -30,14 +22,7 @@ body{
 
 /* Navigation section */
 
-/* header{ */
-    /* grid-area: nav; */
-/* } */
-
 header nav ul {
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* align-items: center; */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-columns: repeat(auto-fit, minmax(.2fr, 1fr));
@@ -51,7 +36,6 @@ header ul li a{
     padding: 10px 50px;
     background-color: gainsboro;
     display: block;
-    /* margin: auto 60px; */
     box-shadow: 3px 3px 5px black;
 }
 
@@ -64,14 +48,12 @@ header li a:hover{
 /* Hero section */
 
 .top-container{
-    /* grid-area: hero; */
     display: grid;
     grid-template-areas: 
     'box box-a'
     'box box-b';
     grid-gap: 2rem;
     grid-template-columns: 5fr 1fr;
-    /* grid-template-columns: repeat(auto-fit, minmax(.5fr, 1fr)); */
     grid-template-rows: repeat(2, 250px);
 }
 
@@ -102,12 +84,7 @@ header li a:hover{
 #hero h3{
     font-size: 1rem;
     font-weight: lighter;
-    /* margin-bottom: 20px; */
 }
-
-/* #membership{
-    background-color: gainsboro;
-} */
 
 .top-container .items{
     background-color: gainsboro;
@@ -133,12 +110,9 @@ header li a:hover{
 /* Services section */
 
 #box-container{
-    /* grid-area: card; */
     display: grid;
     grid-gap: 2rem;
-    /* grid-template-columns: repeat(4, 1fr); */
-    /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Yeh change kia tha responsive kay liye */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 #box-container .box{
@@ -151,10 +125,8 @@ header li a:hover{
 /* Banner section */
 
 #banner{
-    /* grid-area: banner; */
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* grid-template-columns: repeat(auto-fit, minmax(.3fr, 1fr)); */
     background-color: gainsboro;
     padding: 50px;
     box-shadow: 3px 3px 5px black;
@@ -176,13 +148,10 @@ header li a:hover{
 /* Gallery section */
 
 .gallery{
-    /* grid-area: gallery; */
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); My */
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Yeh change kia tha responsive kay liye */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     grid-gap: 1.1rem;
-    /* background-color: gainsboro; */
 }
 
 .gallery img{
@@ -192,16 +161,11 @@ header li a:hover{
 /* Footer section */
 
 footer{
-    /* grid-area: footer; */
     background-color: rgb(32, 32, 32);
     color: white;
     text-align: center;
     padding: 20px;
 }
-
-/* .container section{ */
-    /* background-color: gainsboro; */
-/* } */
 
 /* Utility classes */
 
@@ -212,11 +176,10 @@ a{
 
 /* Media Queries for Tablet & Mobile */
 
-@media only screen and (max-width: 700px) { /* (max-width: 600px) */ /* Yeh change kia tha responsive kay liye */
+@media only screen and (max-width: 700px) { 
 
     header nav ul{
-        /* grid-template-columns: repeat(2, .5fr); */
-        grid-template-columns: 1fr; /* Yeh change kia tha responsive kay liye */
+        grid-template-columns: 1fr;
     }
 
     .top-container{
@@ -232,49 +195,22 @@ a{
     }
 
     #banner{
-        /* display: block; */
-        grid-template-columns: 1fr; /* Yeh change kia tha responsive kay liye */
+        grid-template-columns: 1fr;
     }
 
     #banner img{
         width: 300px;
         height: 200px;
     }
-
-    /* #box-container{ */
-        /* grid-template-columns: repeat(2, .5fr); */
-    /* } */
-
-    /* #box-container #last{
-        display: none;
-    } */
-
-    /* .gallery{ */
-        /* grid-template-columns: repeat(3, 1fr); */
-        /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
-    /* } */
 }
 
-@media screen and (max-width:500px) { /* (max-width: 350px) */ /* Yeh change kia tha responsive kay liye */
-    /* header nav ul{
-        grid-template-columns: repeat(1, .4fr);
-    } */
-    
+@media screen and (max-width:500px) { 
 
-    /* .top-container{
-        grid-template-areas: 
-        'box box'
-        'box box'
-        'box-a box-b'; */
-        /* grid-template-columns: .2fr .2fr; */
-    /* } */
-
-    .top-container{ /* Yeh add kia tha responsive kay liye */
+    .top-container{ 
         grid-template-areas: 
         'box box'
         'box-a box-a'
         'box-b box-b';
-        /* grid-template-columns: .2fr .2fr; */
     }
 
     #hero h1{
